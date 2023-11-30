@@ -46,6 +46,8 @@ router.post("/cart/cash-order", authMiddleware, createOrder);
 
 // router.get("getusers", getalluser); //
 router.get("/getusers", getAllUsers);
+router.delete("/:id", deleteUser);
+
 router.get("/get-order", authMiddleware, getOrders);
 router.get("/refresh", handleRefreshToken);
 router.get("/logout", logout);
@@ -54,7 +56,6 @@ router.get("/cart", authMiddleware, getUserCart);
 
 router.get("/:id", authMiddleware, isAdmin, getauser);
 router.delete("/empty-cart", authMiddleware, emptyCart);
-router.delete("/:id", deleteUser);
 router.post("/edit-user", authMiddleware, updatedUser);
 router.post("/save-address", authMiddleware, saveAddress);
 

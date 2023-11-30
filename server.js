@@ -4,7 +4,18 @@ const connectDB = require("./config/dbConnection");
 const app = express();
 // Load env Variables
 dotenv.config();
+// const cors = require("cors");
+// app.use(cors());
 
+//Cors
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
+//Router
 const authRouter = require("./routes/authRoute");
 const productRouter = require("./routes/productRoute");
 const blogRouter = require("./routes/blogRoute");

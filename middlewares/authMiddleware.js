@@ -68,7 +68,7 @@ exports.authMiddleware = asyncHandler(async (req, res, next) => {
 });
 
 exports.isAdmin = asyncHandler(async (req, res, next) => {
-  const { role } = req.user;
+  const { role } = req.body;
 
   if (role !== "admin") {
     throw new Error("You are not an admin");

@@ -23,7 +23,7 @@ var productSchema = new mongoose.Schema(
     },
     brand: {
       type: String,
-      enum: ["Apple", "Samsung", "Lenovo", "Hp"],
+      enum: ["Apple", "Samsung", "Lenovo", "Hp", "Dell"],
     },
     quantity: { type: Number, required: true },
     sold: { type: Number, default: 0 },
